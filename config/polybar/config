@@ -1,3 +1,6 @@
+; https://github.com/polybar/polybar
+; https://github.com/polybar/polybar/wiki
+
 [colors]
 
 background = #282a36
@@ -17,7 +20,7 @@ grey = #8fa6a1
 monitor = ${env:MONITOR:}
 ; Size
 width  = 100%
-height = 30
+height = 34
 
 ; Offset
 ;offset-x = 50%
@@ -54,18 +57,23 @@ module-margin-right = 0
 
 ; Font
 ;font-0 = Iosevka:size=10;3
-font-0 = Iosevka:size=11;1
-font-1 = Font Awesome 6 Free Regular
-font-2 = Font Awesome 6 Free Solid
+font-0 = Iosevka:size=11;3
+font-1 = Font Awesome 6 Free Regular:size=11;3
+font-2 = Font Awesome 6 Free Solid:size=11;3
 
 ; Modules
 modules-left   = i3
 modules-center = time date
-modules-right  = audio network lock logout poweroff
+modules-right  = audio lock logout poweroff divider
 
 ; Cursor actions
 cursor-click  = pointer
 cursor-scroll = ns-resize
+
+; Tray icons
+tray-position = ${env:TRAY_POS:}
+tray-padding = 5
+tray-background = ${colors.alt.background}
 
 [module/i3]
 type = internal/i3
@@ -217,6 +225,10 @@ content-padding    = 2
 
 ; Mouse click
 click-left = poweroff
+
+[module/divider]
+type = custom/text
+content = ${env:DIVIDER:}
 
 [settings]
 screenchange-reload     = true
