@@ -57,9 +57,9 @@ module-margin-right = 0
 
 ; Font
 ;font-0 = Iosevka:size=10;3
-font-0 = Iosevka:size=11;3
-font-1 = Font Awesome 6 Free Regular:size=11;3
-font-2 = Font Awesome 6 Free Solid:size=11;3
+font-0 = Iosevka:size=12;3
+font-1 = Font Awesome 6 Free Regular:size=12;3
+font-2 = Font Awesome 6 Free Solid:size=12;3
 
 ; Modules
 modules-left   = i3
